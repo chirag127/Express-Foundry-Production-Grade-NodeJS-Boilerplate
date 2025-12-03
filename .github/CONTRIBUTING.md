@@ -1,48 +1,112 @@
-# Contributing to Express-Kickstart-NodeJS-Web-App-Template
+# Contributing to RapidStart-Express-NodeJS-WebApp-Template
 
-Thank you for your interest in contributing to Express-Kickstart-NodeJS-Web-App-Template! We welcome contributions from everyone.
+## 1. Introduction
+Welcome and thank you for considering contributing to `RapidStart-Express-NodeJS-WebApp-Template`! We appreciate your efforts to improve this project. By participating, you uphold our professional standards and help us maintain a high-quality, production-ready boilerplate.
 
-## Code of Conduct
+## 2. Code of Conduct
+Please review our [Code of Conduct](https://github.com/chirag127/RapidStart-Express-NodeJS-WebApp-Template/blob/main/CODE_OF_CONDUCT.md) to understand the expectations for all community members. We are committed to fostering an inclusive and respectful environment.
 
-Please review and adhere to our [Code of Conduct](https://github.com/chirag127/Express-Kickstart-NodeJS-Web-App-Template/blob/main/.github/CODE_OF_CONDUCT.md). We are committed to providing a welcoming and inclusive environment.
+## 3. How Can I Contribute?
+We welcome contributions in various forms:
 
-## How to Contribute
+*   **Reporting Bugs:** Found an issue? Please open a new [Bug Report](https://github.com/chirag127/RapidStart-Express-NodeJS-WebApp-Template/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=%5BBUG%5D%3A+). Provide clear steps to reproduce, expected behavior, and actual behavior.
+*   **Suggesting Enhancements:** Have an idea for a new feature or improvement? Open an issue to discuss it first. This helps ensure alignment with the project's vision.
+*   **Writing Code:** Implement new features, fix bugs, or refactor existing code. Please follow our coding guidelines.
+*   **Improving Documentation:** Enhance READMEs, inline code comments, or create usage guides. Clear documentation is crucial for usability.
 
-1.  **Fork the repository:** Click the "Fork" button on the top right of the repository page.
-2.  **Clone your fork:** `git clone https://github.com/<your-username>/Express-Kickstart-NodeJS-Web-App-Template.git`
-3.  **Create a branch:** `git checkout -b <your-branch-name>` (e.g., `feature/add-dockerfile`)
-4.  **Make your changes:** Implement your feature, fix a bug, or improve documentation.
-5.  **Commit your changes:** Use descriptive commit messages. Follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
-6.  **Push your changes:** `git push origin <your-branch-name>`
-7.  **Create a pull request:**  Go to the original repository and click "Compare & pull request."  Provide a clear title and description of your changes.
+## 4. Setting Up Your Development Environment
 
-## Development Guidelines
+### Prerequisites
+Ensure you have the following installed on your system:
 
-*   **Code Style:** Follow the established code style of the project. We use ESLint and Prettier for code formatting.  Ensure your code passes linting and formatting checks before submitting a pull request.
-*   **Testing:** Write unit tests for your code. Make sure all tests pass before submitting a pull request.
-*   **Documentation:** Update the documentation if you add or modify any functionality.
-*   **Dependencies:**  If you add new dependencies, explain the reason in the pull request description.
+*   **Node.js**: `v18.x` or higher (LTS recommended).
+*   **npm**: Comes bundled with Node.js.
+*   **Git**: For version control.
+*   **(Optional) Docker & Docker Compose**: For containerized development and deployment workflows.
 
-## Setting up the Development Environment
+### Installation Steps
+1.  **Fork the Repository:** Navigate to the `RapidStart-Express-NodeJS-WebApp-Template` repository on GitHub and click the "Fork" button.
+2.  **Clone Your Fork:**
+    bash
+    git clone https://github.com/<YOUR_GITHUB_USERNAME>/RapidStart-Express-NodeJS-WebApp-Template.git
+    cd RapidStart-Express-NodeJS-WebApp-Template
+    
+3.  **Install Dependencies:**
+    bash
+    npm install
+    
+4.  **Run in Development Mode:**
+    bash
+    npm run dev
+    
+    The application should now be running, typically accessible at `http://localhost:3000`.
 
-1.  **Node.js and npm:** Make sure you have Node.js and npm (or yarn/pnpm) installed.
-2.  **Install dependencies:**  Run `npm install` (or `yarn install` or `pnpm install`) in the project directory.
-3.  **Running the application:** `npm start` (or `yarn start` or `pnpm start`)
-4.  **Linting and Formatting:** Run `npm run lint` (or `yarn lint` or `pnpm lint`) and `npm run format` (or `yarn format` or `pnpm format`) to ensure code quality.
-5.  **Testing:** Run `npm test` (or `yarn test` or `pnpm test`) to run the tests.
+## 5. Coding Guidelines
 
-## Pull Request Guidelines
+### Style & Formatting
+We utilize **Biome** for consistent code style and formatting across the project. This ensures readability and maintainability.
 
-*   **Title:** Use a clear and concise title.
-*   **Description:** Provide a detailed description of your changes, including the problem you are solving, the solution you implemented, and any relevant context.
-*   **Testing:** Explain how you tested your changes.
-*   **Reviewers:**  If you know who might be a good reviewer, mention them in the pull request description.
-*   **Dependencies:** If your PR adds new dependencies, include details like why the dependency is needed and the version used.
+*   Before committing, ensure your code is formatted:
+    bash
+    npm run format
+    
+*   Address any linting issues reported by Biome:
+    bash
+    npm run lint
+    
 
-## Resources
+### Commit Messages
+We follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification. This enables automated changelog generation and a clear, semantic commit history.
 
-*   [GitHub Documentation](https://docs.github.com/)
-*   [Node.js Documentation](https://nodejs.org/en/docs/)
-*   [Express.js Documentation](https://expressjs.com/)
+*   **Examples:**
+    *   `feat(auth): Implement user registration endpoint`
+    *   `fix(api): Resolve issue with unhandled null responses`
+    *   `docs(readme): Update setup instructions for Docker`
+    *   `chore(deps): Upgrade express to latest stable version`
 
-Thank you for your contributions!
+## 6. Testing
+
+### Running Tests
+We use **Vitest** for robust unit and integration testing. All new features and bug fixes should include appropriate tests, aiming for high code coverage.
+
+*   Run all tests:
+    bash
+    npm test
+    
+*   Run tests in watch mode (for active development):
+    bash
+    npm run test:watch
+    
+*   Generate code coverage reports:
+    bash
+    npm run test:coverage
+    
+
+## 7. Pull Request Process
+
+1.  **Create a New Branch:**
+    bash
+    git checkout -b feature/your-descriptive-feature-name
+    
+    or for bug fixes:
+    bash
+    git checkout -b bugfix/your-bug-fix-description
+    
+2.  **Make Your Changes:** Implement your feature or bug fix following the coding guidelines.
+3.  **Write Tests:** Ensure your changes are adequately covered by new or updated tests.
+4.  **Run Tests & Linting:** Verify that all tests pass and linting checks are clean before pushing (`npm test` and `npm run lint`).
+5.  **Commit Your Changes:** Use [Conventional Commits](#commit-messages) for clear commit messages.
+6.  **Push Your Branch:**
+    bash
+    git push origin feature/your-descriptive-feature-name
+    
+7.  **Create a Pull Request:**
+    *   Go to your forked `RapidStart-Express-NodeJS-WebApp-Template` repository on GitHub.
+    *   Click the "New Pull Request" button.
+    *   Fill out the [Pull Request Template](https://github.com/chirag127/RapidStart-Express-NodeJS-WebApp-Template/compare) thoroughly, providing a clear description of your changes, the problem they solve, and any relevant screenshots or steps to reproduce.
+
+## 8. Security Vulnerabilities
+If you discover a security vulnerability, please report it responsibly by following our [Security Policy](https://github.com/chirag127/RapidStart-Express-NodeJS-WebApp-Template/blob/main/SECURITY.md). Do not open a public issue or expose sensitive information.
+
+## 9. License
+By contributing to this project, you agree that your contributions will be licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) License](https://github.com/chirag127/RapidStart-Express-NodeJS-WebApp-Template/blob/main/LICENSE).
